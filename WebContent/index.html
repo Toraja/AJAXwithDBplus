@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>Data Finder</title>
+
+		<link rel="stylesheet" href="css/style.css" />
+
+		<script defer src='js/const.js'></script>
+		<script defer src='js/RequestHandler.js'></script>
+		<script defer src='js/InputHandler.js'></script>
+		<script defer src='js/ResponseHandler.js'></script>
+		<script defer src='js/main.js'></script>
+	</head>
+	<body>
+		<div><h1>Data Finder</h1></div>
+
+		<div id="selectArea">
+			Table: 
+			<select id=tableList>
+				<!-- with hidden option, the width of drop down list changes if the text is the longest -->
+				<!-- <option id="tableHelpText" selected hidden value="">choose table</option> -->
+				<option selected disabled value="">choose table</option>
+				<!-- sample -->
+				<!--
+				<option value="">table</option>
+				-->
+			</select>
+			<br/>
+			<button type="button" id="listColumns" disabled>List Conditions</button>
+		</div>
+
+		<div id="formArea" hidden>
+			<form name="condition" id="condition">
+				<!-- column names of table are displayed alongside textbox -->
+
+				<!-- sample -->
+				<!--
+				<p>
+					<label class="formLabel" for="_Name">sample: </label><input type="text" name="sample" id="_Name" class="formData" placeholder="Name"/>
+				</p>
+				-->
+			</form>
+			<button type="button" id="findEmployee">Find Employee</button>
+		</div>
+
+		<div id="resultArea" hidden>
+			<div id="displaySwitch">
+				Format: 
+				<label><input type="radio" name="format" value="format_table" checked />TABLE</label>
+				<label><input type="radio" name="format" value="format_csv" />CSV</label>
+			</div>
+			<div id="dataArea">
+				<!-- matched records are displayed here -->
+			</div>
+		</div>
+		<div id="errorArea">
+				<!-- error messages are displayed here -->
+		</div>
+	</body>
+</html>

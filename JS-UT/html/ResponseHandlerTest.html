@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Test ResponseHandler</title>
+	<link rel="stylesheet" href="../lib/qunit-2.3.3.css">
+
+	<!-- load testing framework -->
+	<script defer src="../lib/qunit-2.3.3.js"></script>
+	<script defer src="../lib/sinon-2.3.6.js"></script>
+
+	<!-- load dependent script -->
+	<script defer src= "../../WebContent/js/const.js"></script>
+
+	<!-- load script to test -->
+	<script defer src= "../../WebContent/js/ResponseHandler.js"></script>
+
+	<!-- load test script -->
+	<script defer src="../js/ResponseHandlerTest.js"></script>
+</head>
+<body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture">
+		<select id="tableList">
+			<option>default</option>
+		</select>
+		<button id="listColumns"></button>
+		<div id="formArea" hidden>
+			<form id="condition">
+			</form>
+		</div>
+		<div id="resultArea">
+			<div id="displaySwitch">
+				Format: 
+				<label><input type="radio" name="format" value="format_table" checked />TABLE</label>
+				<label><input type="radio" name="format" value="format_csv" />CSV</label>
+			</div>
+			<div id="dataArea">
+			</div>
+		</div>
+		<div id="errorArea">
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Test Main</title>
+	<link rel="stylesheet" href="../lib/qunit-2.3.3.css">
+
+	<!-- load testing framework -->
+	<script defer src="../lib/qunit-2.3.3.js"></script>
+	<script defer src="../lib/sinon-2.3.6.js"></script>
+
+	<!-- load dependent script -->
+
+	<!-- load script to test -->
+	<!-- In this test, test script loads the script to be tested -->
+
+	<!-- load test script -->
+	<script defer src="../js/mainTest.js"></script>
+</head>
+<body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture"></div>
+
+	<div id="test" hidden>
+		<!-- event handler is attached in main.js so this element has to be ready in the beginning -->
+		<!-- putting these element in qunit-fixture does not work -->
+		<button type="button" id="listColumns">List Conditions</button>
+		<button type="button" id="findEmployee">Find Employee</button>
+		<div id="resultArea" hidden>
+			<div id="displaySwitch">
+				Format: 
+				<label><input type="radio" name="format" value="format_table" checked />TABLE</label>
+				<label><input type="radio" name="format" value="format_csv" />CSV</label>
+			</div>
+			<div id="dataArea">
+				<!-- matched records are displayed here -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>

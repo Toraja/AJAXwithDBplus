@@ -1,0 +1,68 @@
+.blink {
+	animation-name: blink_anime;
+	animation-duration: 0.6s;
+	animation-timing-function: linear;
+	animation-iteration-count: 3;
+}
+
+@keyframes blink_anime {
+	0% {background-color: white;}
+	50% {background-color: rgba(255, 255, 33, 0.5);}
+}
+
+#selectArea {
+	display: inline-block;
+}
+
+#listColumns {
+	margin-top: 3px;
+}
+
+form {
+	margin-top: 15px;
+	display: table;
+}
+
+.formEntry {
+	display: table-row;
+}
+
+.formLabel {
+	display: table-cell;
+	text-align: right;
+	padding-top: 0.5em;
+	padding-left: 0.3em;
+	padding-right: 0.5em;
+}
+
+.formData {
+	display: table-cell;
+}
+
+#resultArea{
+	margin-top: 15px;
+}
+
+#dataArea {
+	margin-top: 2px;
+	padding: 3px 3px 3px 3px;
+	display: inline-block;
+}
+
+#format_table {
+	text-align: center;
+}
+
+table, td, th {
+	border: 1px solid gray;
+}
+
+th, td {
+	padding: 0px 5px 0px 5px;
+}
+
+#errorArea {
+	margin-top: 15px;
+	display: inline-block;
+	color: red;
+}
