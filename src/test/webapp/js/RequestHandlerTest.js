@@ -1,6 +1,6 @@
 QUnit.module("getTables", {
 	before: () => {
-		window.url = /^http:\/\/localhost:8080\/AJAXwithDBplus\/TableGetter/;
+		window.url = /^http:\/\/.*:8080\/AJAXwithDBplus\/TableGetter/;
 		window.MIMEType = { "Content-Type": "application/json" };
 		window.responseText = '["t1","t2"]';
 		window.ResponseHandler = {
@@ -51,7 +51,7 @@ QUnit.test("Server unavailable", assert => {
 
 QUnit.module("getColumns", {
 	before: () => {
-		window.url = /^http:\/\/localhost:8080\/AJAXwithDBplus\/ColumnGetter/;
+		window.url = /^http:\/\/.*:8080\/AJAXwithDBplus\/ColumnGetter/;
 		window.MIMEType = { "Content-Type": "application/json" };
 		window.responseText = "Normal response text";
 		window.ResponseHandler = {
@@ -112,8 +112,7 @@ QUnit.test("Server unavailable", assert => {
 
 QUnit.module("getData", {
 	before: () => {
-		// window.url = /^http:\/\/localhost:8080\/AJAXwithDBplus\/DBAccessor\?(.+=.+)(&.+=.+)*/;
-		window.url = /^http:\/\/localhost:8080\/AJAXwithDBplus\/MatchedRowsRetriever/;
+		window.url = /^http:\/\/.*:8080\/AJAXwithDBplus\/MatchedRowsRetriever/;
 		window.MIMEType = { "Content-Type": "application/json" };
 		window.responseText = "Normal response text";
 		window.ResponseHandler = {

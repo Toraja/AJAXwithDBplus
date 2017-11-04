@@ -5,7 +5,7 @@ QUnit.test("Try to modify const", assert => {
 
 QUnit.module("Urls");
 QUnit.test("getUrls", assert => {
-	assert.equal(Urls.getUrl("columnGetter"), "http://localhost:8080/AJAXwithDBplus/ColumnGetter");
+	assert.ok(/http:\/\/.*:8080\/AJAXwithDBplus\/ColumnGetter/.test(Urls.getUrl("columnGetter")));
 });
 QUnit.test("Try to modify const", assert => {
 	assert.ok(Object.isFrozen(Urls));
